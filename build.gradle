@@ -43,3 +43,7 @@ springBoot {
 springBoot {
 	executable = true
 }
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '3.3'
+}
