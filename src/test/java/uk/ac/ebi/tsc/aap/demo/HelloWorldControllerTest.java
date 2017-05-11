@@ -70,7 +70,7 @@ public class HelloWorldControllerTest {
         assertThat(response.getStatus(), is(equalTo(HttpStatus.OK.value())));
     }
 
-    public static Map<String, String> createStandardGetHeaders() {
+    protected Map<String, String> createStandardGetHeaders() {
         Map<String, String> h = new HashMap<>();
         h.put("Authorization", "Basic " + Base64Coder.encodeString(DEFAULT_ADMIN + ":" + DEFAULT_PASSWORD));
         return h;
