@@ -39,18 +39,5 @@ public class AAPHelloWorldControllerTest extends HelloWorldControllerTest {
         return headerMap;
     }
 
-    @Override
-    public void welcomePage() throws Exception {
-        //super.welcomePage();
-    }
 
-    @Override
-    public void hello() throws Exception {
-        //super.hello();
-    }
-
-    @Override
-    public void adminPage() throws Exception {
-        //super.adminPage();
-    }
 }
