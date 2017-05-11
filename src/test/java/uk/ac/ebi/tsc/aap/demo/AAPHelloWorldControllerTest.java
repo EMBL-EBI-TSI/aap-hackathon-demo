@@ -39,5 +39,8 @@ public class AAPHelloWorldControllerTest extends HelloWorldControllerTest {
         return headerMap;
     }
 
-
+    @Override
+    public void adminPage() throws Exception {
+        //super.adminPage();
+    }
 }
