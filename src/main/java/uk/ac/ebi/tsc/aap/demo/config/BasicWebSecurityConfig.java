@@ -22,11 +22,11 @@ import org.springframework.security.web.FilterInvocation;
 import org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler;
 import org.springframework.security.web.access.expression.WebSecurityExpressionRoot;
 
-@SuppressWarnings("SpringJavaAutowiringInspection")
-@Configuration
-@EnableGlobalMethodSecurity(prePostEnabled = true)
-@EnableWebSecurity(debug = true)
-@Profile("basic_auth")
+//@SuppressWarnings("SpringJavaAutowiringInspection")
+//@Configuration
+//@EnableGlobalMethodSecurity(prePostEnabled = true)
+//@EnableWebSecurity(debug = true)
+//@Profile("basic_auth")
 public class BasicWebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(BasicWebSecurityConfig.class);

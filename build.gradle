@@ -17,6 +17,7 @@ version = '0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
+	mavenLocal()
 	mavenCentral()
 	maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 }
@@ -30,10 +31,11 @@ dependencies {
 	testCompile 'org.springframework.security:spring-security-web'
 
 	testCompile 'org.springframework.security:spring-security-config'
-	compile 'uk.ac.ebi.tsc.aap.client:aap-client-java:0.1-SNAPSHOT'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile("com.mashape.unirest:unirest-java:1.4.9")
 	compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'uk.ac.ebi.tsc.aap.client:security:0.2-SNAPSHOT'
+	compile 'uk.ac.ebi.tsc.aap.client:service:0.2-SNAPSHOT'
 }
 
 springBoot {

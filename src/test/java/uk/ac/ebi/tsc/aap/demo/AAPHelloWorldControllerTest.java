@@ -1,6 +1,6 @@
 package uk.ac.ebi.tsc.aap.demo;
 
-import com.mashape.unirest.http.utils.Base64Coder;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,8 +16,10 @@ import java.util.Map;
 /**
  * Created by neilg on 11/05/2017.
  */
-@ActiveProfiles("aap_production")
-public class AAPHelloWorldControllerTest extends HelloWorldControllerTest {
+@RunWith(SpringRunner.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@ActiveProfiles("AAPConfig")
+public class AAPHelloWorldControllerTest extends AbstractHelloWorldControllerTest {
 
     @Autowired
     LocalTokenService localTokenService;
@@ -39,8 +41,21 @@ public class AAPHelloWorldControllerTest extends HelloWorldControllerTest {
         return headerMap;
     }
 
+    @Test
     @Override
     public void adminPage() throws Exception {
-        //super.adminPage();
+        super.adminPage();
+    }
+
+    @Test
+    @Override
+    public void welcomePage() throws Exception {
+        super.welcomePage();
+    }
+
+    @Test
+    @Override
+    public void hello() throws Exception {
+        super.hello();
     }
 }

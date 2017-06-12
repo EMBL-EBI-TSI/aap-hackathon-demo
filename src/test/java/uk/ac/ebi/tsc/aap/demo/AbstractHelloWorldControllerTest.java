@@ -25,10 +25,7 @@ import static org.junit.Assert.*;
 /**
  * Created by neilg on 04/05/2017.
  */
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = HelloWorldController.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@ActiveProfiles("test")
-public class HelloWorldControllerTest {
+public abstract class AbstractHelloWorldControllerTest {
 
     @LocalServerPort
     private int port;
@@ -46,7 +43,7 @@ public class HelloWorldControllerTest {
     }
 
 
-    @Test
+
     public void welcomePage() throws Exception {
         HttpResponse response = Unirest.get(rootUri)
                 .headers(createStandardGetHeaders())
@@ -54,7 +51,7 @@ public class HelloWorldControllerTest {
         assertThat(response.getStatus(), is(equalTo(HttpStatus.OK.value())));
     }
 
-    @Test
+
     public void hello() throws Exception {
         HttpResponse response = Unirest.get(rootUri + "/hello")
                 .headers(createStandardGetHeaders())
@@ -62,7 +59,7 @@ public class HelloWorldControllerTest {
         assertThat(response.getStatus(), is(equalTo(HttpStatus.OK.value())));
     }
 
-    @Test
+
     public void adminPage() throws Exception {
         HttpResponse response = Unirest.get(rootUri + "/admin")
                 .headers(createStandardGetHeaders())

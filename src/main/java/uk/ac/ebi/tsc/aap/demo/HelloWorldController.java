@@ -31,7 +31,7 @@ public class HelloWorldController {
         return "Hello";
     }
 
-    @PreAuthorize("hasRole('admin')")
+    @PreAuthorize("hasRole('AAPAdmin')")
     @RequestMapping(value = "/admin**", method = RequestMethod.GET)
     @ResponseBody
     public String adminPage() {

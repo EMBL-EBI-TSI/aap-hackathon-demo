@@ -17,12 +17,12 @@ import uk.ac.ebi.tsc.aap.client.security.StatelessAuthenticationEntryPoint;
 import uk.ac.ebi.tsc.aap.client.security.StatelessAuthenticationFilter;
 import uk.ac.ebi.tsc.aap.client.security.TokenAuthenticationService;
 
-@SuppressWarnings("SpringJavaAutowiringInspection")
-@Configuration
-@EnableGlobalMethodSecurity(prePostEnabled = true)
-@ComponentScan("uk.ac.ebi.tsc.aap.client")
-@Profile("aap_production")
-@Order(1)
+//@SuppressWarnings("SpringJavaAutowiringInspection")
+//@Configuration
+//@EnableGlobalMethodSecurity(prePostEnabled = true)
+//@ComponentScan("uk.ac.ebi.tsc.aap.client")
+//@Profile("aap_production")
+//@Order(1)
 //ComponentScan annotation to scan aap-client-java external artifact
 public class AAPWebSecurityConfig extends WebSecurityConfigurerAdapter {
     private static final Logger LOGGER = LoggerFactory.getLogger(AAPWebSecurityConfig.class);
