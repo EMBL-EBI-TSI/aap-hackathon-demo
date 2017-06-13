@@ -18,7 +18,7 @@ import java.util.Map;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@ActiveProfiles("AAPConfig")
+//@ActiveProfiles("aap_production")
 public class AAPHelloWorldControllerTest extends AbstractHelloWorldControllerTest {
 
     @Autowired
