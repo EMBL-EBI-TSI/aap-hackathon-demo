@@ -10,6 +10,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
@@ -22,7 +23,7 @@ import uk.ac.ebi.tsc.aap.client.security.TokenAuthenticationService;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @ComponentScan("uk.ac.ebi.tsc.aap.client")
 @Profile("aap_production")
-@Order(1)
+@EnableWebSecurity(debug = true)
 //ComponentScan annotation to scan aap-client-java external artifact
 public class AAPWebSecurityConfig extends WebSecurityConfigurerAdapter {
     private static final Logger LOGGER = LoggerFactory.getLogger(AAPWebSecurityConfig.class);
@@ -48,7 +49,7 @@ public class AAPWebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
                 // don't create session
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-                .authorizeRequests().anyRequest().anonymous();
+                .authorizeRequests().anyRequest().authenticated();
 
         httpSecurity.addFilterBefore(statelessAuthenticationFilterBean(),
                 UsernamePasswordAuthenticationFilter.class);

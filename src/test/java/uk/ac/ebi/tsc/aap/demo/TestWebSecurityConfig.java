@@ -25,7 +25,6 @@ import org.springframework.security.web.access.expression.WebSecurityExpressionR
 
 @SuppressWarnings("SpringJavaAutowiringInspection")
 @Configuration
-//@EnableGlobalMethodSecurity(prePostEnabled = true)
 @EnableWebSecurity(debug = true)
 @Profile("test")
 @Order(1)
