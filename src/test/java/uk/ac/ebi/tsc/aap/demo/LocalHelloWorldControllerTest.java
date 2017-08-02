@@ -9,9 +9,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * Created by neilg on 24/05/2017.
  */
-@RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@ActiveProfiles("test")
+//@RunWith(SpringRunner.class)
+//@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+//@ActiveProfiles("test")
 public class LocalHelloWorldControllerTest extends AbstractHelloWorldControllerTest {
 
     @Test
