@@ -14,13 +14,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 //@ActiveProfiles("test")
 public class LocalHelloWorldControllerTest extends AbstractHelloWorldControllerTest {
 
-    @Test
+    //@Test
     @Override
     public void welcomePage() throws Exception {
         super.welcomePage();
     }
 
-    @Test
+    //@Test
     @Override
     public void hello() throws Exception {
         super.hello();

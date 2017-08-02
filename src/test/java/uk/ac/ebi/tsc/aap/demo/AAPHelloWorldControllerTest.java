@@ -41,19 +41,19 @@ public class AAPHelloWorldControllerTest extends AbstractHelloWorldControllerTes
         return headerMap;
     }
 
-    @Test
+    //@Test
     @Override
     public void adminPage() throws Exception {
         super.adminPage();
     }
 
-    @Test
+    //@Test
     @Override
     public void welcomePage() throws Exception {
         super.welcomePage();
     }
 
-    @Test
+    //@Test
     @Override
     public void hello() throws Exception {
         super.hello();
